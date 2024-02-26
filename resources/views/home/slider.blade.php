@@ -17,7 +17,7 @@
                   <label for="">Select Location</label>
                   <div class="input-group">
                     <select class="form-control">
-                      <option data-display="">Mohakhali</option>
+                      <option data-display="Location de">Mohakhali</option>
                       <option value="1">Gulshan</option>
                       <option value="2">Merul Badda</option>
                       <option value="3">Middle Badda</option>
