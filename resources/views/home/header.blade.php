@@ -38,16 +38,19 @@
               @if (Route::has('login'))
               @auth 
               
-
+              
               <li class="nav-item">
                 <form method="POST" action="{{ route('logout') }}">
                   @csrf
                   <button type="submit" class="btn btn-primary" id="logincss">Logout</button>
                 </form>
-              </li>
+              </li>   
+
+              
               
 
               @else
+              
               <li class="nav-item">
                 <a class="btn btn-primary" id="logincss" href="{{ route('login') }}">Login</a>
               </li>
@@ -55,6 +58,9 @@
               <li class="nav-item">
                 <a class="btn btn-success" href="{{ route('register') }}" >Register</a>
               </li>
+
+              
+
               @endauth
               @endif
              
