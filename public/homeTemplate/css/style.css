@@ -180,6 +180,14 @@ a:focus {
   color: #ff6f3c;
 }
 
+
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+
 .custom_nav-container .navbar-toggler {
   outline: none;
 }

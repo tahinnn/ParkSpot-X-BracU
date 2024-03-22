@@ -11,4 +11,20 @@ class GoogleController extends Controller
     {
         return view('googleAutocomplete');
     }
+
+
+
+    public function location()
+    {
+        return view('home/location');
+    }
+
+
+
+    public function show($id)
+    {
+        
+        return view('locations/show', ['id' => $id]);
+    }
+
 }

@@ -61,3 +61,8 @@ route::get('/search','App\Http\Controllers\HomeController@search');
 |
 */
 Route::get('google-autocomplete', [GoogleController::class, 'index']);
+
+//Route::get('/location', [GoogleController::class, 'location'])->name('location');
+
+Route::get('/location/{id}', 'App\Http\Controllers\GoogleController@show')->name('location');
+
