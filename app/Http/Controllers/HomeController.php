@@ -35,4 +35,18 @@ class HomeController extends Controller
             return view('admin.home');
         }
     }
+
+    public function mybookings()
+    {
+       return view("home.my_bookings");
+    }
+
+    public function search()
+{
+    return view('home/search');
 }
+}
+
+
+
+

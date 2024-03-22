@@ -26,18 +26,18 @@
                 <a class="nav-link" href="why.html">Why Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="testimonial.html">Testimonial</a>
+                <a class="nav-link" href="testimonial.html">||</a>
               </li>
               
-              <form class="form-inline">
-              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-              </form>
+              
               
               @if (Route::has('login'))
               @auth 
-              
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('mybookings')}}">My Bookings</a>
+                
+              </li>
+
               
               <li class="nav-item">
                 <form method="POST" action="{{ route('logout') }}">
@@ -72,3 +72,5 @@
       </div>
     </header>
     <!-- end header section -->
+
+    

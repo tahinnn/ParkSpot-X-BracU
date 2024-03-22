@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RedirectController;
+use App\Http\Controllers\GoogleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-route :: get("/",[HomeController::class, 'index']);
+Route :: get("/",[HomeController::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',
@@ -28,4 +30,34 @@ Route::middleware([
 
 
 ## New code
-route :: get("/redirect",[HomeController::class, 'redirect']);
+Route :: get("/redirect",[HomeController::class, 'redirect']);
+
+Route :: get("/add_employee_view",[AdminController::class, 'addview']);
+
+
+Route :: post("/upload_employee",[AdminController::class, 'upload']);
+
+Route :: get("/mybookings",[HomeController::class, 'mybookings']);
+
+//Route::get('/redirect', 'RedirectController@redirect')->name('redirect');
+route::get('/search','App\Http\Controllers\HomeController@search');
+
+
+
+
+
+ 
+  
+
+  
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+Route::get('google-autocomplete', [GoogleController::class, 'index']);

@@ -16,6 +16,8 @@
 
         <!-- Styles -->
         @livewireStyles
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfDfQ5ko4zUOVO-3Vqz7QLR5Wwa2HlU6w&libraries=places"></script>
+
     </head>
     <body class="font-sans antialiased">
         <x-banner />
