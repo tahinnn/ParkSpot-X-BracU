@@ -5,6 +5,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\GoogleController;
+
+use App\Http\Controllers\LocationController;
+
+use App\Http\Controllers\ParkingController;
+use App\Http\Controllers\ParkingSpotController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,3 +72,8 @@ Route::get('google-autocomplete', [GoogleController::class, 'index']);
 
 Route::get('/location/{id}', 'App\Http\Controllers\GoogleController@show')->name('location');
 
+
+
+Route::get('/parking', [ParkingSpotController::class, 'index'])->name('parking.index');
+Route::post('/parking/book', [ParkingSpotController::class, 'book'])->name('parking.book');
+Route::get('/parking-layout', [ParkingSpotController::class, 'getParkingLayout']);

@@ -59,7 +59,7 @@
             </div>
             
             <div class="btn-box" >
-               <a href="/search" class="btn btn-primary" style="color:White;" >
+               <a href="/search" class="btn btn-primary" style="color:White; align:center" >
                Search Now
                </a>
             </div>
