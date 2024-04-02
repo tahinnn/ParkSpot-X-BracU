@@ -10,6 +10,7 @@ use App\Http\Controllers\LocationController;
 
 use App\Http\Controllers\ParkingController;
 use App\Http\Controllers\ParkingSpotController;
+use App\Http\Controllers\ParkingBookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,3 +78,11 @@ Route::get('/location/{id}', 'App\Http\Controllers\GoogleController@show')->name
 Route::get('/parking', [ParkingSpotController::class, 'index'])->name('parking.index');
 Route::post('/parking/book', [ParkingSpotController::class, 'book'])->name('parking.book');
 Route::get('/parking-layout', [ParkingSpotController::class, 'getParkingLayout']);
+
+
+
+##new code (qr code)
+
+Route::post('/qr-scan', [ParkingController::class, 'scan'])->name('qr.scan');
+Route::post('/parking/book', [ParkingController::class, 'book'])->name('parking.book');
+Route::get('/scan-and-book', [ParkingBookingController::class, 'scanAndBook'])->name('scan_and_book');

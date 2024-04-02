@@ -14,9 +14,15 @@ class AddFieldsToParkingLayoutsTable extends Migration
     public function up()
     {
         Schema::table('parking_layouts', function (Blueprint $table) {
-            $table->integer('row');
-            $table->integer('column');
-            $table->boolean('is_available')->default(true);
+            if (!Schema::hasColumn('parking_layouts', 'row')) {
+                $table->integer('row');
+            }
+            if (!Schema::hasColumn('parking_layouts', 'column')) {
+                $table->integer('column');
+            }
+            if (!Schema::hasColumn('parking_layouts', 'is_available')) {
+                $table->boolean('is_available')->default(true);
+            }
         });
     }
 

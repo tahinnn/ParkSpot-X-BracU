@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-  @include("admin.css")
+    @include("admin.css")
   </head>
   <body>
     <div class="container-scroller">
@@ -10,18 +10,32 @@
       @include("admin.sidebar")
       <!-- partial -->
       @include("admin.header")
-        <!-- partial:partials/_navbar.html -->
-        
-        <!-- partial -->
-        @include("admin.body")
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-          @include("admin.footer")
-          <!-- partial -->
+      <!-- partial -->
+      <div class="content-wrapper">
+        <div class="container">
+          <h1>Welcome to Our Parking Management System</h1>
+          <!-- Add the "Scan" section here -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Scan QR Code</h5>
+                  <p class="card-text">Click the button below to scan the QR code and book your parking spot.</p>
+                  <a href="{{ route('scan_and_book') }}" class="btn btn-primary">Scan QR Code and Book</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of "Scan" section -->
         </div>
-        <!-- main-panel ends -->
       </div>
-      <!-- page-body-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      @include("admin.footer")
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->

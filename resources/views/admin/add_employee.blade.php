@@ -22,7 +22,7 @@
         
         
         
-        <div class = "container" align="center" style="padding-top: 100px;">
+        <div class = "container" align ="center" style="padding-top: 100px;">
           
            @if(session()->has('message'))
            <div class="alert alert-success">
